@@ -35,10 +35,15 @@ export const BurgerConstructor: FC = () => {
     if (!user) {
       navigation('/login');
     } else {
-      const ingredientIds = [
-        ...constructorItems.ingredients.map((ingredient) => ingredient._id),
-        constructorItems.bun._id
-      ];
+      const ingredientIds: string[] = [];
+
+      ingredientIds.push(constructorItems.bun._id);
+      ingredientIds.push(constructorItems.bun._id);
+
+      constructorItems.ingredients.forEach((ingredient) => {
+        ingredientIds.push(ingredient._id);
+      });
+
       dispatch(orderBurger(ingredientIds));
     }
   };
