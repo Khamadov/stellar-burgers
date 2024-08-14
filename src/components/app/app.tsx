@@ -17,7 +17,7 @@ import {
   Route,
   useNavigate
 } from 'react-router-dom';
-import { AppHeader, OrderStatus } from '@components';
+import { AppHeader } from '@components';
 import { Modal } from '@components';
 import { OrderInfo } from '@components';
 import { IngredientDetails } from '@components';
