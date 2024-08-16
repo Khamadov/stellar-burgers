@@ -4,12 +4,12 @@ import { BurgerConstructorUI } from '@ui';
 import { useSelector } from '../../services/store';
 import { RootState } from '../../services/store';
 import { useNavigate } from 'react-router-dom';
-import { userSelectors } from '../../services/userSlice';
+import { userSelectors } from '../../services/slices/userSlice';
 import { useDispatch } from '../../services/store';
 import {
   BurgerConstructorActions,
   orderBurger
-} from '../../services/burgerConstructorSlice';
+} from '../../services/slices/burgerConstructorSlice';
 import { RequestStatus } from '@utils-types';
 
 export const BurgerConstructor: FC = () => {

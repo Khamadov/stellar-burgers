@@ -17,14 +17,14 @@ import {
   Route,
   useNavigate
 } from 'react-router-dom';
-import { AppHeader, OrderStatus } from '@components';
+import { AppHeader } from '@components';
 import { Modal } from '@components';
 import { OrderInfo } from '@components';
 import { IngredientDetails } from '@components';
 import { ProtectedRoute } from '../protected-route/ProtectedRoute';
 import { useDispatch } from '../../services/store';
-import { getIngredients } from '../../services/ingredientsSlice';
-import { checkUserAuth, userActions } from '../../services/userSlice';
+import { getIngredients } from '../../services/slices/ingredientsSlice';
+import { checkUserAuth, userActions } from '../../services/slices/userSlice';
 
 const App = () => {
   const location = useLocation();
